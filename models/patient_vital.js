@@ -4,8 +4,11 @@ const sequelize = require('../config/db');
 class PATIENT_VITAL extends Model {}
 PATIENT_VITAL.init(
     {
-        mrno: DataTypes.INTEGER,
-        vital_id: DataTypes.INTEGER,
+        id: {
+            type: DataTypes.INTEGER,
+            primaryKey: true,
+            autoIncrement: true,
+        },
         value: DataTypes.INTEGER,
         createdAt: DataTypes.DATE,
     },
